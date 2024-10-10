@@ -12,6 +12,7 @@ const FrameNft = ({ imgSrc, title, subtitle, description }: FrameNftProps) => {
     <div tw="relative flex flex-col text-center items-center justify-center">
       <img
         src={imgSrc}
+        alt={`${title} nft image`}
         tw="h-full"
         style={{
           opacity: 1,
@@ -20,7 +21,7 @@ const FrameNft = ({ imgSrc, title, subtitle, description }: FrameNftProps) => {
       />
       <div tw="w-full flex items-center justify-between absolute text-white bottom-[20px] text-[36px] px-[10px]">
         <div
-          tw="max-w-3/4 w-fit flex px-4 rounded-xl py-0"
+          tw="max-w-3/4 flex px-4 rounded-xl py-0"
           style={{ backgroundColor: "rgba(0,0,0, 0.6)", lineHeight: "0.1" }}
         >
           <p>
@@ -35,7 +36,7 @@ const FrameNft = ({ imgSrc, title, subtitle, description }: FrameNftProps) => {
           </p>
         </div>
         <div
-          tw="w-fit flex px-4 rounded-xl py-0"
+          tw="flex px-4 rounded-xl py-0"
           style={{ backgroundColor: "rgba(0,0,0, 0.6)", lineHeight: "0.1" }}
         >
           <p tw="">{subtitle}</p>
