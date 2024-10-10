@@ -7,7 +7,7 @@ interface RedirectToCoinbaseProps {
   chainId: string;
   nftType: string;
   collectionAddress: string;
-  tokenId: string;
+  tokenId?: string;
 }
 export const RedirectToCoinbase = ({
   chainId,
@@ -17,7 +17,9 @@ export const RedirectToCoinbase = ({
 }: RedirectToCoinbaseProps) => {
   useEffect(() => {
     redirect(
-      `https://wallet.coinbase.com/nft/mint/eip155:${chainId}:${nftType}:${collectionAddress}`
+      `https://wallet.coinbase.com/nft/mint/eip155:${chainId}:${nftType}:${collectionAddress}${
+        tokenId ? `:${tokenId}` : ""
+      }`
     );
   });
   return <></>;

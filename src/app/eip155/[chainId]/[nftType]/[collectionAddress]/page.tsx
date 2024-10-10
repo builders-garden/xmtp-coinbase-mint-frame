@@ -8,7 +8,6 @@ interface HomeProps {
     nftType: string;
     chainId: string;
     collectionAddress: string;
-    tokenId: string;
   };
 }
 
@@ -35,7 +34,6 @@ export default function Home({ params }: HomeProps) {
         chainId={params.chainId}
         nftType={params.nftType}
         collectionAddress={params.collectionAddress}
-        tokenId={params.tokenId}
       />
     </main>
   );
